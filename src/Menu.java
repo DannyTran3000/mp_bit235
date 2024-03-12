@@ -32,17 +32,16 @@ public class Menu {
   }
 
   public int init() {
-    Print pr = new Print();
     Scanner sc = new Scanner(System.in);
 
-    pr.breakLines(3);
+    Print.breakLines(3);
     System.out.println("===== ===== =====      MENU      ===== ===== =====");
     for (int i = 0; i < this.list.length; i++) {
       System.out.println((i + 1) + ". " + this.list[i]);
     }
     System.out.println("0. Exit");
-    pr.divideLine();
-    pr.breakLines(3);
+    Print.divideLine();
+    Print.breakLines(3);
 
     boolean notFound = false;
     int choice;

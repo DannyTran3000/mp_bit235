@@ -13,28 +13,27 @@ public class Workshop {
   private final String sampleText = "I love java programming";
 
   public Workshop() {
-    Print pr = new Print();
 
     this.getDifferenceOf2Numbers();
-    pr.breakLines(2);
+    Print.breakLines(2);
 
     this.getDegreesConversion();
-    pr.breakLines(2);
+    Print.breakLines(2);
 
     this.getCircleArea();
-    pr.breakLines(2);
+    Print.breakLines(2);
 
     this.getCompoundInterest();
-    pr.breakLines(2);
+    Print.breakLines(2);
 
     this.getSunAndEarthInfo();
-    pr.breakLines(2);
+    Print.breakLines(2);
 
     this.getCarDistance();
-    pr.breakLines(2);
+    Print.breakLines(2);
 
     this.getLengthOfSubString();
-    pr.breakLines(2);
+    Print.breakLines(2);
 
     this.getStringsComparison();
   }
@@ -140,21 +139,21 @@ public class Workshop {
     Scanner sc = new Scanner(System.in);
 
     System.out.println("Exercise 8: Compare 2 strings and their first characters");
-    pr.breakLines(1);
+    Print.breakLines(1);
 
     System.out.print("First string: ");
     String firstStr = sc.nextLine();
-    pr.breakLines(1);
+    Print.breakLines(1);
 
     System.out.print("Second string: ");
     String secondStr = sc.nextLine();
-    pr.breakLines(1);
+    Print.breakLines(1);
 
     System.out.println(
         firstStr.equals(secondStr)
             ? "The two given strings are equal"
             : "The two given strings are not equal");
-    pr.breakLines(1);
+    Print.breakLines(1);
 
     System.out.println(
         firstStr.charAt(0) == secondStr.charAt(0)

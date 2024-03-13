@@ -1,8 +1,8 @@
 package components.navigation;
 
-import components.workshops.Week2;
-import components.workshops.Week3;
-import components.workshops.Week1;
+import components.workshops.Week_1;
+import components.workshops.Week_2;
+import components.workshops.Week_3;
 import utils.Print;
 import utils.Prompt;
 
@@ -21,13 +21,13 @@ public class MainMenu {
         System.out.println("Good bye.");
         break;
       case 1:
-        new Week1();
+        new Week_1();
         break;
       case 2:
-        new Week2();
+        new Week_2();
         break;
       case 3:
-        new Week3();
+        new Week_3();
         break;
       default:
         System.out.println("Warning: Option not found!");

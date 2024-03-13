@@ -4,8 +4,8 @@ import components.caseStudies.Shipping;
 import utils.Constant;
 import utils.Prompt;
 
-public class Week1 {
-  public Week1() {
+public class Week_1 {
+  public Week_1() {
     int weight = Prompt.nextInt("Input the weight: ");
 
     String isInternational = Prompt.nextOption(

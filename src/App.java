@@ -1,9 +1,10 @@
+import components.navigation.MainMenu;
 import utils.Print;
 import utils.Prompt;
 
 public class App {
   public static void main(String[] args) throws Exception {
-    Menu menu = new Menu();
+    MainMenu menu = new MainMenu();
     boolean shouldOpenMenu = true;
 
     while (shouldOpenMenu) {

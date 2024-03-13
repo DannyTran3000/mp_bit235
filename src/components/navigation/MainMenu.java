@@ -1,9 +1,11 @@
-import options.week1.ShippingCostCalculation;
-import options.week2.Workshop;
+package components.navigation;
+
+import components.workshops.week2;
+import components.workshops.week1;
 import utils.Print;
 import utils.Prompt;
 
-public class Menu {
+public class MainMenu {
   private String[] list = {
       "Week 1: Shipping Cost Calculation",
       "Week 2: Workshop"
@@ -16,11 +18,11 @@ public class Menu {
         break;
 
       case 1:
-        new ShippingCostCalculation();
+        new week1();
         break;
 
       case 2:
-        new Workshop();
+        new week2();
         break;
 
       default:

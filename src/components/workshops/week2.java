@@ -3,7 +3,7 @@ package components.workshops;
 import utils.Print;
 import utils.Prompt;
 
-public class week2 {
+public class Week2 {
   private final double pi = 3.14,
       interestRate = 0.04,
       fuelConsumptionPerKm = 8.0 / 100,
@@ -11,7 +11,7 @@ public class week2 {
   private final int sunDiameter = 865000, earthDiameter = 7600;
   private final String sampleText = "I love java programming";
 
-  public week2() {
+  public Week2() {
 
     this.getDifferenceOf2Numbers();
     Print.breakLines(2);

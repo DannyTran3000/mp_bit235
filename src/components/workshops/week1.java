@@ -2,8 +2,8 @@ package components.workshops;
 
 import utils.Prompt;
 
-public class week1 {
-  public week1() {
+public class Week1 {
+  public Week1() {
     int weight = Prompt.nextInt("Input the weight: ");
     String isInternational = Prompt.next("Is is an international shipping? (y/n)");
 

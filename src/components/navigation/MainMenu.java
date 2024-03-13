@@ -1,7 +1,7 @@
 package components.navigation;
 
-import components.workshops.week2;
-import components.workshops.week1;
+import components.workshops.Week2;
+import components.workshops.Week1;
 import utils.Print;
 import utils.Prompt;
 
@@ -18,11 +18,11 @@ public class MainMenu {
         break;
 
       case 1:
-        new week1();
+        new Week1();
         break;
 
       case 2:
-        new week2();
+        new Week2();
         break;
 
       default:

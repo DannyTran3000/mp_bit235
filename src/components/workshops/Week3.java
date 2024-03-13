@@ -25,7 +25,10 @@ public class Week3 {
     // this.doExercise5();
     // Print.breakLines(2);
 
-    this.doExercise6();
+    // this.doExercise6();
+    // Print.breakLines(2);
+
+    this.doExercise7();
     // Print.breakLines(2);
   }
 
@@ -220,5 +223,86 @@ public class Week3 {
     double totalCost = frame.calculateCost();
 
     System.out.println("====> The total cost of framing the picture is: $" + totalCost);
+  }
+
+  // Exercise 7
+  private void doExercise7() {
+    System.out.println("Exercise 7:");
+    Print.breakLines(1);
+
+    // 7a
+    System.out.println("a. Enter 2 integers which the first one is less than the second one.");
+
+    int firstNum, secondNum;
+    boolean shouldLoop = true;
+    do {
+      firstNum = Prompt.nextInt("The first integer: ");
+      secondNum = Prompt.nextInt("The second integer: ");
+
+      if (firstNum >= secondNum)
+        System.out.println("Warning: The first integer must be less than the second one!");
+      else
+        shouldLoop = false;
+    } while (shouldLoop);
+
+    Print.breakLines(2);
+
+    // 7b
+    System.out.println("b. All the odd numbers in [" + firstNum + ", " + secondNum + "]:");
+
+    int oddCount = 0;
+    String oddStr = "";
+    int evenSum = 0, oddSum = 0;
+    for (int i = firstNum; i <= secondNum; i++) {
+      if (i % 2 != 1) {
+        evenSum += i; // for 7c calculation
+        continue;
+      }
+
+      // print a comma between 2 numbers
+      if (oddCount > 0)
+        oddStr += ", ";
+
+      oddCount++;
+      oddStr += i;
+      oddSum += i; // for 7e calculation
+    }
+
+    System.out.println(oddStr);
+
+    Print.breakLines(2);
+
+    // 7c
+    System.out.println("c. The sum of all the even numbers in [" + firstNum + ", " + secondNum + "]:");
+    System.out.println(evenSum); // evenSum is calculated in the for loop at 7b
+
+    Print.breakLines(2);
+
+    // 7d
+    final int start = 1, end = 10;
+    System.out.println("d. All the odd numbers and their squares in [" + start + ", " + end + "]:");
+
+    System.out.printf("%-27s\n", "---------------------------");
+    System.out.printf("| %-10s | %-10s |\n", "Number", "Square");
+    System.out.printf("%-27s\n", "---------------------------");
+
+    for (int i = 1; i <= 10; i++)
+      System.out.printf("| %-10d | %-10.0f |\n", i, Math.pow(i, 2));
+
+    System.out.printf("%-27s\n", "---------------------------");
+
+    Print.breakLines(2);
+
+    // 7e
+    System.out.println("e. The sum of all the odd numbers in [" + firstNum + ", " + secondNum + "]:");
+    System.out.println(oddSum); // oddSum is calculated in the for loop at 7b
+
+    Print.breakLines(2);
+
+    // 7f
+    System.out.println("f. All the uppercase letters.");
+
+    for (char c = 'A'; c < 'Z'; c++)
+      System.out.print(c);
   }
 }

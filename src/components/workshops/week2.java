@@ -12,7 +12,6 @@ public class Week2 {
   private final String sampleText = "I love java programming";
 
   public Week2() {
-
     this.getDifferenceOf2Numbers();
     Print.breakLines(2);
 
@@ -41,8 +40,7 @@ public class Week2 {
   private void getDifferenceOf2Numbers() {
     System.out.println("Exercise 1: The difference of two numbers");
 
-    System.out.println("Enter two numbers:");
-    int a = Prompt.nextInt("Enter two numbers:");
+    int a = Prompt.nextInt("Enter two numbers:", 0);
     int b = Prompt.nextInt("");
 
     System.out.println("The difference of " + a + " and " + b + " is: " + Math.abs(a - b));

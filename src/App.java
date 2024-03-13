@@ -15,10 +15,12 @@ public class App {
 
         String msg = "Would like to return to the main menu (y/n)?";
         Print.divideLine(msg.length());
-        String check = Prompt.nextLine(msg);
+        String check = Prompt.next(msg);
 
-        if (!check.equals("y"))
+        if (!check.equals("y")) {
           shouldOpenMenu = false;
+          MainMenu.choose(0);
+        }
       }
     }
 

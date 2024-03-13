@@ -5,7 +5,7 @@ import utils.Prompt;
 public class Week1 {
   public Week1() {
     int weight = Prompt.nextInt("Input the weight: ");
-    String isInternational = Prompt.next("Is is an international shipping? (y/n)");
+    String isInternational = Prompt.next("Is is an international shipping? (y/n)", 1);
 
     double finalFee = this.getShipping(weight, isInternational.equals("y"));
 

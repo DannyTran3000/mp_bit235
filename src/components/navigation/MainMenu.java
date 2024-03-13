@@ -39,16 +39,17 @@ public class MainMenu {
   public static int init() {
     Print.breakLines(3);
 
-    String heading = "===== ===== =====      MENU      ===== ===== =====";
-    // Print heading
-    System.out.println(heading);
-    // Print menu list
+    System.out.printf("%-54s\n", "------------------------------------------------------");
+    System.out.printf("| %-22s %s %-22s |\n", "", "Menu", "");
+    System.out.printf("%-54s\n", "------------------------------------------------------");
+
     for (int i = 0; i < list.length; i++)
-      System.out.println((i + 1) + ". " + list[i]);
-    // Print exit option
-    System.out.println("0. Exit");
-    // Print divider
-    Print.divideLine(heading.length());
+      System.out.printf("| %-5s %-44s |\n", (i + 1) + ".", list[i]);
+
+    System.out.printf("| %-5s %-44s |\n", "0.", "Exit");
+
+    System.out.printf("%-50s\n", "------------------------------------------------------");
+
     Print.breakLines(3);
 
     return Prompt.nextIntInRange(

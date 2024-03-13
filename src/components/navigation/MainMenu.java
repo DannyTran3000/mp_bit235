@@ -6,15 +6,15 @@ import utils.Print;
 import utils.Prompt;
 
 public class MainMenu {
-  private String[] list = {
+  private static String[] list = {
       "Week 1: Shipping Cost Calculation",
       "Week 2: Workshop"
   };
 
-  public boolean choose(int id) {
+  public static boolean choose(int id) {
     switch (id) {
       case 0:
-        System.out.println("Good bye !!!");
+        System.out.println("Good bye.");
         break;
 
       case 1:
@@ -26,31 +26,37 @@ public class MainMenu {
         break;
 
       default:
-        System.out.println("Option not found !!!");
+        System.out.println("Warning: Option not found!");
     }
 
     return id != 0;
   }
 
-  public int init() {
+  public static int init() {
     Print.breakLines(3);
-    System.out.println("===== ===== =====      MENU      ===== ===== =====");
-    for (int i = 0; i < this.list.length; i++) {
-      System.out.println((i + 1) + ". " + this.list[i]);
+
+    String heading = "===== ===== =====      MENU      ===== ===== =====";
+    // Print heading
+    System.out.println(heading);
+    // Print menu list
+    for (int i = 0; i < list.length; i++) {
+      System.out.println((i + 1) + ". " + list[i]);
     }
+    // Print exit option
     System.out.println("0. Exit");
-    Print.divideLine();
+    // Print divider
+    Print.divideLine(heading.length());
     Print.breakLines(3);
 
     boolean notFound = false;
     int choice;
 
     do {
-      choice = Prompt.nextInt("Enter your choice (0 - " + this.list.length + "): ");
-      notFound = choice < 0 || choice > this.list.length;
+      choice = Prompt.nextInt("Enter your choice (0 - " + list.length + "): ");
+      notFound = choice < 0 || choice > list.length;
 
       if (notFound)
-        System.out.println("Option not found !!!");
+        System.out.println("Warning: Option not found!");
     } while (notFound);
 
     return choice;

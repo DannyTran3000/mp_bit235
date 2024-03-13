@@ -51,17 +51,9 @@ public class MainMenu {
     Print.divideLine(heading.length());
     Print.breakLines(3);
 
-    boolean notFound = false;
-    int choice;
-
-    do {
-      choice = Prompt.nextInt("Enter your choice (0 - " + list.length + "): ");
-      notFound = choice < 0 || choice > list.length;
-
-      if (notFound)
-        System.out.println("Warning: Option not found!");
-    } while (notFound);
-
-    return choice;
+    return Prompt.nextIntInRange(
+        "Enter your choice (0 - " + list.length + "): ",
+        0,
+        list.length);
   }
 }

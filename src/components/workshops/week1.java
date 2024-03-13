@@ -1,26 +1,20 @@
 package components.workshops;
 
+import components.caseStudies.Shipping;
+import utils.Constant;
 import utils.Prompt;
 
 public class Week1 {
   public Week1() {
     int weight = Prompt.nextInt("Input the weight: ");
-    String isInternational = Prompt.next("Is is an international shipping? (y/n)", 1);
 
-    double finalFee = this.getShipping(weight, isInternational.equals("y"));
+    String isInternational = Prompt.nextOption(
+        "Is is an international shipping (y/n)?",
+        Constant.binaryOpts,
+        1);
 
-    System.out.println("The final fee: " + finalFee);
-  }
+    double shippingFee = Shipping.getFee(weight, isInternational.equals("y"));
 
-  private double getShipping(int weight, boolean isInternational) {
-    double fee = 12.95, shippingFee = fee;
-
-    if (weight > 16)
-      shippingFee = fee + ((weight - 16) * 0.3);
-
-    if (isInternational)
-      shippingFee = shippingFee + (weight * 10);
-
-    return shippingFee;
+    System.out.println("The final fee: " + shippingFee);
   }
 }

@@ -1,4 +1,5 @@
 import components.navigation.MainMenu;
+import utils.Constant;
 import utils.Print;
 import utils.Prompt;
 
@@ -15,7 +16,7 @@ public class App {
 
         String msg = "Would like to return to the main menu (y/n)?";
         Print.divideLine(msg.length());
-        String check = Prompt.next(msg);
+        String check = Prompt.nextOption(msg, Constant.binaryOpts);
 
         if (!check.equals("y")) {
           shouldOpenMenu = false;

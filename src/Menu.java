@@ -1,8 +1,7 @@
-import java.util.Scanner;
-
 import options.week1.ShippingCostCalculation;
 import options.week2.Workshop;
 import utils.Print;
+import utils.Prompt;
 
 public class Menu {
   private String[] list = {
@@ -32,8 +31,6 @@ public class Menu {
   }
 
   public int init() {
-    Scanner sc = new Scanner(System.in);
-
     Print.breakLines(3);
     System.out.println("===== ===== =====      MENU      ===== ===== =====");
     for (int i = 0; i < this.list.length; i++) {
@@ -47,8 +44,7 @@ public class Menu {
     int choice;
 
     do {
-      System.out.print("Enter your choice (0 - " + this.list.length + "): ");
-      choice = sc.nextInt();
+      choice = Prompt.nextInt("Enter your choice (0 - " + this.list.length + "): ");
       notFound = choice < 0 || choice > this.list.length;
 
       if (notFound)

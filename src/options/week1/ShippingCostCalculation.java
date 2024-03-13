@@ -1,21 +1,16 @@
 package options.week1;
 
-import java.util.Scanner;
-
 import components.Shipping;
+import utils.Prompt;
 
 public class ShippingCostCalculation {
   public ShippingCostCalculation() {
-    Scanner sc = new Scanner(System.in);
+    int weight = Prompt.nextInt("Input the weight: ");
 
-    System.out.println("Input the weight: ");
-    int weight = sc.nextInt();
-
-    System.out.println("Is is an international shipping? (Y/N)");
-    String isInternational = sc.next();
+    String isInternational = Prompt.next("Is is an international shipping? (y/n)");
 
     Shipping S = new Shipping();
-    double finalFee = S.getShipping(weight, isInternational.equals("Y"));
+    double finalFee = S.getShipping(weight, isInternational.equals("y"));
 
     System.out.println("The final fee: " + finalFee);
   }

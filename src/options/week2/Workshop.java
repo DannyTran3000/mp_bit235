@@ -1,8 +1,7 @@
 package options.week2;
 
-import java.util.Scanner;
-
 import utils.Print;
+import utils.Prompt;
 
 public class Workshop {
   private final double pi = 3.14,
@@ -40,25 +39,20 @@ public class Workshop {
 
   // Exercise 1
   private void getDifferenceOf2Numbers() {
-    Scanner sc = new Scanner(System.in);
-
     System.out.println("Exercise 1: The difference of two numbers");
 
     System.out.println("Enter two numbers:");
-    int a = sc.nextInt();
-    int b = sc.nextInt();
+    int a = Prompt.nextInt("Enter two numbers:");
+    int b = Prompt.nextInt("");
 
     System.out.println("The difference of " + a + " and " + b + " is: " + Math.abs(a - b));
   }
 
   // Exercise 2
   private void getDegreesConversion() {
-    Scanner sc = new Scanner(System.in);
-
     System.out.println("Exercise 2: Convert Celsius degrees to Fahrenheit degrees");
 
-    System.out.print("Enter the Celsius degree: ");
-    float c = sc.nextFloat();
+    float c = Prompt.nextFloat("Enter the Celsius degree: ");
     float f = c * 9 / 5 + 32;
 
     System.out.println("The Fahrenheit degrees: " + f);
@@ -66,12 +60,9 @@ public class Workshop {
 
   // Exercise 3
   private void getCircleArea() {
-    Scanner sc = new Scanner(System.in);
-
     System.out.println("Exercise 3: Calculate the area of circle");
 
-    System.out.print("Enter the radius of the circle(m): ");
-    float r = sc.nextFloat();
+    float r = Prompt.nextFloat("Enter the radius of the circle(m): ");
     double a = this.pi * Math.pow(r, 2);
 
     System.out.println("The area of this circle: " + a + " m2");
@@ -79,15 +70,11 @@ public class Workshop {
 
   // Exercise 4
   private void getCompoundInterest() {
-    Scanner sc = new Scanner(System.in);
-
     System.out.println("Exercise 4: Calculate the compound interest");
 
-    System.out.println("How much do you invest in (AUD)? ");
-    double p = sc.nextDouble();
+    double p = Prompt.nextDouble("How much do you invest in (AUD)? ");
 
-    System.out.println("How long is the period (years)? ");
-    int year = sc.nextInt();
+    int year = Prompt.nextInt("How long is the period (years)? ");
 
     double compoundInterest = p * Math.pow(1 + this.interestRate, year);
 
@@ -135,18 +122,13 @@ public class Workshop {
 
   // Exercise 8
   private void getStringsComparison() {
-    Print pr = new Print();
-    Scanner sc = new Scanner(System.in);
-
     System.out.println("Exercise 8: Compare 2 strings and their first characters");
     Print.breakLines(1);
 
-    System.out.print("First string: ");
-    String firstStr = sc.nextLine();
+    String firstStr = Prompt.nextLine("First string: ");
     Print.breakLines(1);
 
-    System.out.print("Second string: ");
-    String secondStr = sc.nextLine();
+    String secondStr = Prompt.nextLine("Second string: ");
     Print.breakLines(1);
 
     System.out.println(

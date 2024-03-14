@@ -7,26 +7,26 @@ import utils.Prompt;
 
 public class Week_3 {
   public Week_3() {
-    this.doExercise1();
-    Print.breakLines(2);
+    // this.doExercise1();
+    // Print.breakLines(2);
 
-    this.doExercise2();
-    Print.breakLines(2);
+    // this.doExercise2();
+    // Print.breakLines(2);
 
-    this.doExercise3();
-    Print.breakLines(2);
+    // this.doExercise3();
+    // Print.breakLines(2);
 
-    this.doExercise4a();
-    Print.breakLines(2);
+    // this.doExercise4a();
+    // Print.breakLines(2);
 
-    this.doExercise4b();
-    Print.breakLines(2);
+    // this.doExercise4b();
+    // Print.breakLines(2);
 
-    this.doExercise5();
-    Print.breakLines(2);
+    // this.doExercise5();
+    // Print.breakLines(2);
 
-    this.doExercise6();
-    Print.breakLines(2);
+    // this.doExercise6();
+    // Print.breakLines(2);
 
     this.doExercise7();
     Print.breakLines(2);
@@ -302,7 +302,7 @@ public class Week_3 {
     // 7f
     System.out.println("f. All the uppercase letters.");
 
-    for (char c = 'A'; c < 'Z'; c++)
+    for (char c = 'A'; c <= 'Z'; c++)
       System.out.print(c);
   }
 }

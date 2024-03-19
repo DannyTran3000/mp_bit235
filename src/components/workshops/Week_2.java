@@ -123,10 +123,10 @@ public class Week_2 {
     System.out.println("Exercise 8: Compare 2 strings and their first characters");
     Print.breakLines(1);
 
-    String firstStr = Prompt.nextLine("First string: ");
+    String firstStr = Prompt.next("First string: ");
     Print.breakLines(1);
 
-    String secondStr = Prompt.nextLine("Second string: ");
+    String secondStr = Prompt.next("Second string: ");
     Print.breakLines(1);
 
     System.out.println(

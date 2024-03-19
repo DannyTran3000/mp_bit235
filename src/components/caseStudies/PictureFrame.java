@@ -20,7 +20,7 @@ public class PictureFrame {
   }
 
   private double calculateColorCost() {
-    final double cost = this.color != "white" ? 0.1 : 0;
+    final double cost = this.color.equals("white") ? 0 : 0.1;
     return cost * this.calculateSize();
   }
 

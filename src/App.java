@@ -14,7 +14,7 @@ public class App {
       if (shouldOpenMenu) {
         Print.breakLines(3);
 
-        String msg = "Would like to return to the main menu (y/n)?";
+        String msg = "Would like to return to the Main Menu (y/n)?";
         Print.divideLine(msg.length());
         String check = Prompt.nextOption(msg, Constant.binaryOpts);
 

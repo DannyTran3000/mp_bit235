@@ -131,6 +131,10 @@ public class Prompt {
     return sc.nextDouble();
   }
 
+  public static void consumeDangling() {
+    sc.nextLine();
+  }
+
   public static void close() {
     sc.close();
   }

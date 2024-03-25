@@ -117,11 +117,6 @@ public class Week_4 {
     System.out.println("Exercise 4: Decode message.");
     Print.breakLines(1);
 
-    // // Consumes the dangling newline character
-    // // Ignore it as it does not relate to the program
-    // Prompt.consumeDangling(); // DO NOT delete this line.
-    // // ==================================================
-
     String msg = Prompt.nextLine("Enter your message: ");
     String[] splitArr = msg.split("");
 
@@ -187,7 +182,7 @@ public class Week_4 {
       System.out.println(count + (count > 1 ? " results" : " result"));
       Print.breakLines(1);
       for (int i = 0; i < count; i++)
-        System.out.println(resArr[i]);
+        System.out.println("----- " + (i + 1) + ". " + resArr[i]);
     } else
       System.out.println("Result not found!!!");
   }
